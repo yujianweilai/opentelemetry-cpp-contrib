@@ -15,11 +15,11 @@ on:
 jobs:
   nginx-build-test:
     name: nginx
-    runs-on: ubuntu-20.04
+    runs-on: centos-7.9
     strategy:
       matrix:
-        os: [ubuntu-20.04, ubuntu-18.04, debian-10.11, debian-11.3]
-        nginx-rel: [mainline, stable]
+        os: [ubuntu-20.04, ubuntu-18.04, debian-10.11, debian-11.3, centos-7.9]
+        nginx-rel: [1.19.9]
     steps:
       - name: checkout otel nginx
         uses: actions/checkout@v3
